@@ -1,0 +1,11 @@
+2026-04-12 10:15:21 INFO Starting order-service on port 8080
+2026-04-12 10:15:25 INFO Connected to config server
+2026-04-12 10:16:02 WARN Request latency increasing for /api/orders
+2026-04-12 10:16:10 ERROR Database connection timeout while acquiring connection from pool
+2026-04-12 10:16:10 ERROR Failed to connect to PostgreSQL at db-prod:5432
+2026-04-12 10:16:11 ERROR Connection pool exhausted, active connections=100, max connections=100
+2026-04-12 10:16:12 EXCEPTION sqlalchemy.exc.TimeoutError: QueuePool limit reached
+2026-04-12 10:16:13 CRITICAL Order creation failed for request_id=abx1029
+2026-04-12 10:16:14 INFO Retrying failed request
+2026-04-12 10:16:15 ERROR Retry failed due to database timeout
+2026-04-12 10:16:18 INFO Health check degraded

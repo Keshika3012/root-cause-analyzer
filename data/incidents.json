@@ -1,0 +1,42 @@
+[
+    {
+      "incident_id": "INC001",
+      "title": "Database connection pool exhausted",
+      "symptoms": "Application logs show timeout errors when connecting to PostgreSQL. Requests fail under peak load.",
+      "root_cause": "Database connection pool limit was reached due to too many concurrent requests.",
+      "resolution": "Increase connection pool size, optimize queries, and add connection timeout handling.",
+      "tags": ["database", "timeout", "postgres", "connection pool"]
+    },
+    {
+      "incident_id": "INC002",
+      "title": "Out of memory in application service",
+      "symptoms": "Service crashes with OOMKilled events and memory usage spikes before restart.",
+      "root_cause": "Memory leak caused by unbounded object growth in worker processes.",
+      "resolution": "Fix memory leak, add memory profiling, and increase memory limits temporarily.",
+      "tags": ["memory", "oom", "kubernetes", "crash"]
+    },
+    {
+      "incident_id": "INC003",
+      "title": "Missing environment variable after deployment",
+      "symptoms": "Application fails immediately after deployment with configuration or key errors.",
+      "root_cause": "Required environment variable was not set in the deployment environment.",
+      "resolution": "Add the missing environment variable and validate deployment configs before release.",
+      "tags": ["deployment", "config", "env", "startup failure"]
+    },
+    {
+      "incident_id": "INC004",
+      "title": "External API rate limit exceeded",
+      "symptoms": "Logs show 429 errors and downstream requests start failing intermittently.",
+      "root_cause": "The service exceeded the rate limits imposed by an external API.",
+      "resolution": "Add retry with backoff, caching, and rate limiting on the client side.",
+      "tags": ["api", "429", "rate limit", "external service"]
+    },
+    {
+      "incident_id": "INC005",
+      "title": "Disk space exhaustion on server",
+      "symptoms": "Write operations fail and logs show no space left on device.",
+      "root_cause": "Disk usage grew due to accumulated logs and temporary files.",
+      "resolution": "Clear old files, rotate logs, and set disk monitoring alerts.",
+      "tags": ["disk", "storage", "filesystem", "logs"]
+    }
+  ]
